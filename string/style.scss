@@ -1,0 +1,27 @@
+body{
+    padding: 0;
+    margin: 2% 0;
+    height: 100vh;
+    background-color: bisque;
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+        .text-box{
+            padding: 2% 0;
+            width: 100%;
+        }
+    }
+}
+.replace {
+
+    border: 1px soild black ;
+    padding: 0% 1%;
+    align-items: center;
+
+}
+#reversebtn{
+    border: 1px soild black  !important;
+}

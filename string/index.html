@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+
+    
+    <section class="container">
+      <div class="inner-container">
+        <h1 class="heading">Find And Replace</h1>
+        <form action="#" class="find-replace">
+          <div class="text-box">
+            <label for="input">Find :</label>
+            <input type="text" id="input" />
+          </div>
+          <div class="text-box">
+            <label for="replace">Replace :</label>
+            <input type="text" id="replace" />
+          </div>
+          <button class="replace" id="repalce">Go</button>
+        </form>
+
+       
+
+        <div class="text-box">
+          <label for="find">Find And Reverse :</label>
+          <input type="text" id="find" />
+          <button type="button"  id="reversebtn" class="reversebtn">GO</button>
+        </div>
+        <div class="text-box">
+          <p class="para">
+            Myself Rahul. I am from hyderabad. I did my schooling in Good
+            shepherd high. I scored an aggregate of 8.8 CGPA in my 10th standard
+            and 95% in my 12th standard. This was my turning point as I had to
+            decide whether to follow my heart or to go with the conventional
+            mind. I am always grateful that I was allowed to choose my passion
+            of perusing a web developer. I enjoyed the entire course 
+          </p>
+        </div>
+
+
+
+
+        <!-- <div class="number">
+          <h1>Number</h1>
+          The sum of the all the number until : <input type="number" id="number" />
+          <label for="re">result</label>
+          <input type="text" id="re">
+
+          <input type="button" id="result" value="Go">
+        </div>
+ -->
+
+      </div>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    -->
+    
+    <script>
+
+
+      document.addEventListener("DOMContentLoaded", function () {
+        let btn = document.getElementById("repalce");
+        btn.addEventListener("click", doFindReplace);
+
+        let reversebtn = document.getElementById('reversebtn');
+        reversebtn.addEventListener('click', reverse);
+
+        // let result = document.getElementById('result');
+        // result.addEventListener('click',findresult);
+
+      });
+
+      function doFindReplace(ev) {
+        ev.preventDefault();
+
+        let find = document.getElementById("input").value;
+        let replace = document.getElementById("replace").value;
+
+        let p = document.querySelector(".para");
+
+        while (p.textContent.indexOf(find) != -1) {
+          p.textContent = p.textContent.replace(find, replace);
+          
+        }
+      }
+
+      function reverse(){
+        let mark = document.getElementById('find').value;
+        let p = document.querySelector(".para");
+
+        while (p.textContent.indexOf(mark) != -1) {
+          p.textContent = p.textContent.replace(mark, reverseString(mark));
+        }
+      }
+
+      function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+
+// function findresult(){
+//   let number = document.getElementById('number').value;
+
+//   for(let i=1; i<number; i++){
+//     number = number+i;
+//     console.log(number);
+//   }
+// }
+
+
+      
+
+    </script>
+  </body>
+</html>

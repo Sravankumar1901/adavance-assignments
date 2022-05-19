@@ -1,0 +1,37 @@
+body {
+  padding: 0;
+  margin: 2% 0;
+  height: 100vh;
+  background-color: bisque;
+}
+
+body .container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .container .text-box {
+  padding: 2% 0;
+  width: 100%;
+}
+
+.replace {
+  border: 1px soild black;
+  padding: 0% 1%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#reversebtn {
+  border: 1px soild black  !important;
+}
+/*# sourceMappingURL=style.css.map */
